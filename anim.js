@@ -40,13 +40,13 @@ sr.reveal('.showcase-right', {
   origin: 'right',
   distance: '300px',
   delay: 500,
-  viewFactor: 0.5
+  viewFactor: 0.2
 });
 sr.reveal('.proj', {
   duration: 1000,
   origin: 'left',
   distance: '300px',
-  viewFactor: 0.35
+  viewFactor: 0.2
 });
 // aboutme
 sr.reveal('.prof', {
