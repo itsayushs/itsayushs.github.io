@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About · Ayush Sharma · Lead AI Engineer & SRE</title>
+  <meta name="description" content="About Ayush Sharma: Lead AI Engineer at IBM Software Labs with 7+ years combining Enterprise AI Engineering, Multi-Agent systems, and cloud infrastructure."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: 'var(--bg)',
+            ink: 'var(--ink)',
+            ink2: 'var(--ink2)',
+            muted: 'var(--muted)',
+            rule: 'var(--rule)',
+            card: 'var(--card)',
+            accent: 'var(--accent)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" href="../res/Alogo.png" type="image/png"/>
+</head>
+<body class="min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-rule bg-bg/90 backdrop-blur supports-[backdrop-filter]:bg-bg/75 transition-colors">
+    <div class="page flex h-[72px] items-center justify-between gap-4 md:h-[80px]">
+      <a href="../" class="group flex items-center gap-3 text-ink font-semibold tracking-tight">
+        <img src="../res/Alogo.png" alt="Ayush Sharma Logo" class="h-8 w-8 rounded-full border border-rule object-cover shadow-sm"/>
+        <div class="flex flex-col">
+          <span class="text-[17px] font-semibold text-ink group-hover:text-accent transition-colors">Ayush Sharma</span>
+          <span class="text-[11px] font-mono text-muted tracking-wider uppercase">Lead AI Engineer · IBM Software Labs</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-[14.5px]">
+        <a href="../#work" class="text-ink2 hover:text-ink transition-colors link-u">Work</a>
+        <a href="../what-i-do/" class="text-ink2 hover:text-ink transition-colors link-u">What I do</a>
+        <a href="../#experience" class="text-ink2 hover:text-ink transition-colors link-u">Experience</a>
+        <a href="../#certifications" class="text-ink2 hover:text-ink transition-colors link-u">Certifications</a>
+        <button type="button" onclick="openAskAyush()" class="group flex items-center gap-2 text-ink2 hover:text-ink transition-colors font-medium">
+          <span class="link-u">Ask Ayush</span>
+          <kbd class="hidden rounded border border-rule px-1.5 py-0.5 font-mono text-[10.5px] text-muted lg:inline">⌘K</kbd>
+        </button>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle-btn" type="button" onclick="toggleTheme()" aria-label="Toggle theme" class="grid h-9 w-9 place-items-center rounded-full border border-rule text-ink2 hover:border-ink hover:text-ink transition-colors">
+          <svg class="h-4 w-4 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          <svg class="h-4 w-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+        </button>
+        <a href="mailto:69ayushsharma@gmail.com" class="btn btn-primary hidden sm:inline-flex text-[13.5px]">Email Ayush</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page py-12 md:py-20">
+    <div class="max-w-3xl mb-16">
+      <span class="font-mono text-[12px] text-accent uppercase tracking-wider block mb-2">Background & Focus</span>
+      <h1 class="font-serif text-[44px] sm:text-[56px] text-ink leading-tight mb-6">
+        About Ayush Sharma
+      </h1>
+      <p class="text-[18px] text-ink2 leading-relaxed">
+        AI Engineer and Site Reliability Engineering professional with <strong>7+ years</strong> of experience architecting and building scalable, cloud-native systems, combining deep expertise in SRE, DevOps, Platform Engineering, and Enterprise AI Engineering.
+      </p>
+    </div>
+
+    <div class="space-y-8 max-w-3xl text-[15.5px] leading-relaxed text-ink2">
+      <p>
+        I currently serve as <strong>Lead AI Engineer at IBM Software Labs</strong> in Gurgaon, India. Throughout my career spanning over 7 years across <strong>IBM Software Labs</strong>, <strong>Cvent</strong> (where I was Sr. SRE until August 2026), <strong>IBM</strong>, and <strong>Bristlecone</strong>, I have worked at the intersection of production reliability and modern AI systems.
+      </p>
+
+      <p>
+        My specialization centers on designing and developing production-grade, AI-native applications, Agentic AI systems, Multi-Agent Architectures, RAG pipelines, and MCP integrations using <strong>TypeScript</strong>, <strong>Python</strong>, <strong>Mastra</strong>, <strong>AWS Bedrock</strong>, <strong>LangChain</strong>, <strong>pgvector</strong>, and <strong>ChromaDB</strong>.
+      </p>
+
+      <p>
+        I maintain a strong foundation in building and operating enterprise-scale infrastructure across AWS, Azure, IBM Cloud, and OpenStack, with expertise in Kubernetes, CI/CD, GitOps, Infrastructure-as-Code, Observability, and Platform Engineering. I am proficient in designing resilient, highly available systems and establishing the engineering practices required to take AI workloads from development to production.
+      </p>
+
+      <p class="italic border-l-2 border-accent pl-4 text-ink">
+        "Passionate about bridging AI Engineering and SRE to build scalable, reliable, observable, and production-ready AI-native applications for enterprise adoption."
+      </p>
+
+      <div class="border-t border-b border-rule py-6 my-8 grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-[13px]">
+        <div>
+          <span class="text-muted block text-[11px]">LOCATION</span>
+          <span class="text-ink font-medium">Gurgaon, IN</span>
+        </div>
+        <div>
+          <span class="text-muted block text-[11px]">EXPERIENCE</span>
+          <span class="text-ink font-medium">7+ Years</span>
+        </div>
+        <div>
+          <span class="text-muted block text-[11px]">CERTIFICATIONS</span>
+          <span class="text-ink font-medium">9 Verified (CKA, AZ-305)</span>
+        </div>
+        <div>
+          <span class="text-muted block text-[11px]">EDUCATION</span>
+          <span class="text-ink font-medium">B.Tech IT (8.2 GPA)</span>
+        </div>
+      </div>
+
+      <h3 class="font-serif text-[28px] text-ink pt-4">Engineering Principles</h3>
+      <ul class="dash-list space-y-3">
+        <li><strong>Bridge AI & SRE:</strong> AI applications must follow the same observability, SLI/SLO rigor, and automated rollback policies as critical infrastructure.</li>
+        <li><strong>Continuous Evaluations:</strong> Validate tool calling consistency, execution traces, and response accuracy using structured agent evals and Datadog tracing.</li>
+        <li><strong>Declarative GitOps:</strong> No snowflake deployments. Kubernetes manifests, Helm charts, Crossplane CRDs, and Terraform modules represent the immutable source of truth.</li>
+      </ul>
+
+      <div class="pt-8 flex flex-wrap gap-4">
+        <a href="mailto:69ayushsharma@gmail.com" class="btn btn-primary text-[14px] py-2 px-5">
+          Email Ayush
+        </a>
+        <a href="../Ayush Sharma-Resume_AI-SRE.pdf" download class="btn text-[14px] py-2 px-5">
+          Download Résumé (PDF)
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+:root {
+  --bg: #f6f4ef;
+  --ink: #141311;
+  --ink2: #514b43;
+  --muted: #8c8376;
+  --rule: #e5e0d4;
+  --card: #ebe6db;
+  --card-hover: #e2dcd0;
+  --inv: #141311;
+  --accent: #d96f32;
+  --accent-soft: #f4e8dc;
+  --del: #ec685829;
+  --add: #5cc48224;
+  --flag: #ef7a64;
+  --lit: #f0965099;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #141311;
+  --ink: #eeeae2;
+  --ink2: #cfc9bd;
+  --muted: #9c958a;
+  --rule: #34302a;
+  --card: #1d1b18;
+  --card-hover: #262320;
+  --inv: #eeeae2;
+  --accent: #f09650;
+  --accent-soft: #2a2118;
+  --del: #ec685829;
+  --add: #5cc48224;
+  --flag: #ef7a64;
+  --lit: #f0965099;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+.page {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Links & Underlines */
+.link-u {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+.link-u:hover {
+  text-decoration-color: var(--ink);
+  color: var(--ink);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: 1px solid var(--rule);
+  background-color: transparent;
+  color: var(--ink2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  background-color: var(--card);
+}
+
+.btn-primary {
+  background-color: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  background-color: var(--ink);
+  color: var(--bg);
+}
+
+/* Ask Dialog Modal */
+.ask-dialog {
+  background: var(--bg);
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  color: var(--ink);
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+}
+
+.ask-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  animation: 0.2s cubic-bezier(0.16, 1, 0.3, 1) ask-in;
+}
+
+.ask-dialog::backdrop {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: rgba(20, 19, 17, 0.45);
+}
+
+@media (min-width: 768px) {
+  .ask-dialog {
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    width: 480px;
+    height: calc(100dvh - 32px);
+    inset: 16px 16px 16px auto;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes ask-in {
+  0% {
+    opacity: 0;
+    transform: translateX(18px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Animated thinking indicator */
+.ask-thinking i {
+  font-style: normal;
+  display: inline-block;
+  animation: 1.2s infinite ask-dot;
+}
+
+.ask-thinking i:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.ask-thinking i:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes ask-dot {
+  0%, 60%, 100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+/* Recruiter Mode Rules:
+   When Recruiter Mode is ON:
+   1. Only Home (Hero) and Experience sections are visible.
+   2. All tabs in top menu bar disappear except recruiter mode toggle.
+   3. Profile photo updates to profile-1.png.
+*/
+body.recruiter-active .non-recruiter-section {
+  display: none !important;
+}
+
+body.recruiter-active .main-nav-tabs {
+  display: none !important;
+}
+
+body.recruiter-active .recruiter-hide {
+  display: none !important;
+}
+
+body.recruiter-active .recruiter-highlight {
+  position: relative;
+  border-left: 2px solid var(--accent) !important;
+  padding-left: 0.75rem;
+  background-color: var(--accent-soft);
+  border-radius: 0 4px 4px 0;
+}
+
+body.recruiter-active .recruiter-badge {
+  display: inline-flex !important;
+}
+
+.recruiter-badge {
+  display: none;
+}
+
+/* Profile Photo Transition */
+#profile-img {
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+/* Chat bubble styling */
+.chat-msg-user {
+  background-color: var(--card);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  align-self: flex-end;
+  border-radius: 14px 14px 2px 14px;
+  padding: 0.65rem 0.95rem;
+  max-width: 85%;
+  font-size: 0.9rem;
+}
+
+.chat-msg-bot {
+  background-color: transparent;
+  color: var(--ink);
+  align-self: flex-start;
+  padding: 0.5rem 0.25rem;
+  max-width: 100%;
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+.dash-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dash-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.dash-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
