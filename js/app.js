@@ -73,7 +73,7 @@
       location: "Gurgaon, Haryana, India",
       linkedin: "https://linkedin.com/in/ayush-sharma97",
       github: "https://github.com/itsayushs",
-      education: "B.Tech in Information Technology from Manipal University Jaipur (GPA: 8.2, 2015-2019)",
+      education: "B.Tech in Information Technology from Manipal University Jaipur (2015-2019)",
       experienceYears: "7+ years",
       publication: "IEEE 2018: Analysis and Improvements on Current Pothole Detection Techniques (ICSCEE)"
     },
